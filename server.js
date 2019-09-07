@@ -1,9 +1,7 @@
 const express = require("express");
-const mysql = require("mysql");
 const exphbs = require("express-handlebars");
 
 const app = express();
-
 const PORT = process.env.PORT || 3002;
 
 app.use(express.urlencoded({ extended: true }));
@@ -12,13 +10,7 @@ app.set(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-const connection = mysql.createConnection({
-    host: "localhost",
-    port: 3306,
-    user: "root",
-    password: "Calvin16",
-    database: "burger_db"
-});
+const connection = require("./config/connection")
 
 connection.connect(function(err) {
     if (err) {
@@ -29,8 +21,14 @@ connection.connect(function(err) {
 })
 
 app.get("/", function(req, res) {
-    connection.query("SELECT * FROM tasks;", function(err, data) {
-        if (err) throw err;
-        
-    })
-})
+    connection.query("SELECT * FROM burgers", function(err, data) {
+        if (err) {
+            return res.status(500).end();
+        };
+        res.render("index", {food: data});
+    });
+});
+
+app.listen(PORT, function() {
+    console.log("Server listening on: http://localhost:" + PORT);
+});
