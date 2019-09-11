@@ -10,6 +10,9 @@ app.set(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+app.use(express.static("public"));
+
+
 const connection = require("./config/connection")
 
 connection.connect(function(err) {
