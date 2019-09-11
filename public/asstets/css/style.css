@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap');
+
+
+body {
+    background: #FFC644;
+    font-family: 'Red Hat Display', sans-serif;
+    text-align: center
+}
+.box {
+    background: rgb(68, 196, 255);
+    min-height: 100px;
+    margin: 0 100px 0 100px;
+    padding: 20px;
+}
+.box2 {
+    background: rgb(68, 196, 255);
+    min-height: 100px;
+    margin: 0 100px 0 100px;
+    padding: 20px;
+}
+
+
