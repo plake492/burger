@@ -1,5 +1,24 @@
 <h1>Burgers For All</h1>
 
-{{#each food}}
-<p>{{this.burger_name}}: Devoured: {{this.devoured}}</p>
-    {{/each}}
+<h2>Not Devoured</h2>
+{{#each burger}}
+    <div>
+    {{#unless devoured}}
+        {{> burgers/burger-file devoured=false}}
+    {{/unless}}
+    </div>
+{{/each}}
+
+<h2>Already Devoured</h2>
+
+
+{{#each burger}}
+    <div>
+    {{#if devoured}}
+        {{> burgers/burger-file devoured=true}}
+    {{/if}}
+    </div>
+{{/each}}
+
+
+
