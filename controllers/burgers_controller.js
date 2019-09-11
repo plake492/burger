@@ -40,5 +40,5 @@ router.get("/api/burgers", function(req, res) {
     });
 });
 
-// controller => server
+// models/burger.js <= controller => server
 module.exports = router;

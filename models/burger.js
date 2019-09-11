@@ -24,5 +24,5 @@ var burger = {
   }
 };
 
-// Models => controller
+// ORM <= Models => controller
 module.exports = burger;

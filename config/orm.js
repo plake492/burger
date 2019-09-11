@@ -94,5 +94,5 @@ const orm = {
   }
 };
 
-//ORM => Models - burger.js
+// Connection <= ORM => Models/burger.js
 module.exports = orm;

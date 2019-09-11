@@ -1,12 +1,12 @@
 $(function() {
     $(".eat-burger").on("click", function(event) {
         const id = $(this).data("id");
-        const newDevoured = $(this).data("devouredState");
+        const newDevoured = $(this).data("devouredstate");
 
         const newDevouredState = {
             devoured: newDevoured
         };
-        console.log(newDevoured)
+        console.log(id)
 
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
