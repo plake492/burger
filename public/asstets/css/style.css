@@ -6,6 +6,11 @@ body {
     font-family: 'Red Hat Display', sans-serif;
     text-align: center
 }
+.bigBox {
+    background-color: rgb(219, 96, 96);
+    padding: 30px;
+    margin: 20px;   
+}
 .box {
     background: rgb(68, 196, 255);
     min-height: 100px;
