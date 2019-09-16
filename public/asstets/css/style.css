@@ -6,6 +6,9 @@ body {
     font-family: 'Red Hat Display', sans-serif;
     text-align: center
 }
+p {
+    font-size: 20px
+}
 .bigBox {
     background-color: rgb(219, 96, 96);
     padding: 30px;
@@ -13,15 +16,22 @@ body {
 }
 .box {
     background: rgb(68, 196, 255);
-    min-height: 100px;
+    min-height: 500px;
+    max-height: 500px;
     margin: 0 100px 0 100px;
-    padding: 20px;
+    padding: 20px 20px 20px 60px;
+    text-align: left;
+    overflow: scroll;
 }
-.box2 {
+.boxForm {
     background: rgb(68, 196, 255);
-    min-height: 100px;
-    margin: 0 100px 0 100px;
+    height: 150px;
+    margin: 0 140px 40px 140px;
     padding: 20px;
 }
+.delete-burger, .eat-burger {
+    font-size: 10px;
+}
+
 
 

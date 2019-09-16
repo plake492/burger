@@ -80,15 +80,11 @@ const orm = {
   },
 
   delete: function(table, condition, cb) {
-   let queryString = "DELETE FROM " + table;
-    queryString += " WHERE ";
-    queryString += condition;
-
+   let queryString = "DELETE FROM " + table +" WHERE " + condition;
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }
-
       cb(result);
     });
   }

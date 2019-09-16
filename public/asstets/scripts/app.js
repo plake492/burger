@@ -8,7 +8,7 @@ $(function() {
         };
         console.log(id)
 
-        $.ajax("/api/burgers/" + id, {
+        $.ajax(`/api/burgers/${id}`, {
             type: "PUT",
             data: newDevouredState
         }).then(
@@ -16,6 +16,7 @@ $(function() {
               location.reload();
             }
         );
+        $(".box").empty();
     });
 
     $(".create-form").on("submit", function(event) {
@@ -38,4 +39,17 @@ $(function() {
         );
     });
 
-})
+    $(".delete-burger").on("click", function(event) {
+        event.preventDefault(); 
+        const id = $(this).data("id");
+
+        $.ajax("/api/burgers/" + id, {
+            type: "DELETE"
+            }).then(
+            function() {
+                console.log(`deleted burger ${id}`);
+                location.reload();
+            }
+        );
+    });
+});

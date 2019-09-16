@@ -1,8 +1,12 @@
 {{burger_name}}
  {{#if devoured}}
-    <button class="eat-burger" data-id="{{id}}" data-devouredState="{{devoured}}">
-       EAT IT!
-    </button>
+      <button class="eat-burger" data-id="{{id}}" data-devouredState="{{devoured}}">
+         EAT IT!
+      </button>
+      {{else}}
+      <button class="delete-burger" data-id="{{id}}">
+         Toss it!
+      </button>
 {{/if}}
 
    
